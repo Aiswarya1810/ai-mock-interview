@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import genAI from "@/lib/gemini";
 import { supabase } from "@/lib/supabase";
 
@@ -104,16 +104,24 @@ Give:
     setLoading(false);
   };
 
-  useEffect(() => {
-    generateQuestions();
-  }, []);
+  
 
   return (
     <div className="min-h-screen bg-gray-100 p-8">
       <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-8">
         <h1 className="text-3xl font-bold mb-6">AI Interview</h1>
 
-        {loading && <p>Loading...</p>}
+{questions.length === 0 && (
+  <button
+    onClick={generateQuestions}
+    disabled={loading}
+    className="bg-black text-white px-6 py-3 rounded-lg mb-6"
+  >
+    {loading ? "Generating..." : "Generate Questions"}
+  </button>
+)}
+
+{loading && <p>Loading...</p>}
 
         {questions.map((question, index) => (
           <div key={index} className="mb-6">
