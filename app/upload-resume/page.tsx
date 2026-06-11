@@ -1,4 +1,4 @@
-//working
+//working 
 "use client";
 
 import { useState } from "react";
@@ -24,7 +24,7 @@ export default function UploadResumePage() {
         <h1 className="text-3xl font-bold mb-4">Upload Resume</h1>
 
         <p className="text-gray-600 mb-4">
-          Paste your resume text below. The AI will generate interview questions based on it.
+          Paste your resume below. The AI will generate interview questions based on it.
         </p>
 
         <textarea
