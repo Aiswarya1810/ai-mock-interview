@@ -10,7 +10,7 @@ export default function UploadResumePage() {
 
   const handleStartInterview = () => {
     if (!resumeText.trim()) {
-      alert("Please paste your resume text first.");
+      alert("Please paste your resume text.");
       return;
     }
 
