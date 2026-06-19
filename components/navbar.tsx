@@ -16,7 +16,7 @@ export default function Navbar() {
     <nav className="bg-white shadow border-b">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <h1 className="text-xl font-bold">
-          AI Mock Interview
+          AI MOCK INTERVIEW
         </h1>
 
         <div className="flex gap-6 items-center">
