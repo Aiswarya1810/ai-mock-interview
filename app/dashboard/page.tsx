@@ -1,9 +1,12 @@
 "use client";
 
+import Navbar from "@/components/Navbar";
 import Link from "next/link";
 
 export default function DashboardPage() {
   return (
+     <>
+    <Navbar />
     <div className="min-h-screen bg-gray-100 p-8">
       <h1 className="text-4xl font-bold mb-6">Dashboard</h1>
 
@@ -24,5 +27,7 @@ export default function DashboardPage() {
         </Link>
       </div>
     </div>
+    </>
   );
+  
 }
