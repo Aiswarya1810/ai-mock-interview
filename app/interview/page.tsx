@@ -3,6 +3,8 @@
 import { useState } from "react";
 import genAI from "@/lib/gemini";
 import { supabase } from "@/lib/supabase";
+import Navbar from "@/components/NavbarComponent";
+
 
 export default function InterviewPage() {
   const [questions, setQuestions] = useState<string[]>([]);
@@ -107,6 +109,9 @@ Give:
   
 
   return (
+    <>
+      <Navbar />
+
     <div className="min-h-screen bg-gray-100 p-8">
       <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-8">
         <h1 className="text-3xl font-bold mb-6">AI Interview</h1>
@@ -161,5 +166,7 @@ Give:
         )}
       </div>
     </div>
+        </>
+
   );
 }

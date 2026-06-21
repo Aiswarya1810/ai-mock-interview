@@ -3,6 +3,8 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Navbar from "@/components/NavbarComponent";
+
 
 export default function UploadResumePage() {
   const [resumeText, setResumeText] = useState("");
@@ -19,6 +21,9 @@ export default function UploadResumePage() {
   };
 
   return (
+    <>
+          <Navbar />
+
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-6">
       <div className="bg-white w-full max-w-3xl rounded-xl shadow-lg p-8">
         <h1 className="text-3xl font-bold mb-4">Upload Resume</h1>
@@ -42,5 +47,6 @@ export default function UploadResumePage() {
         </button>
       </div>
     </div>
+    </>
   );
 }
