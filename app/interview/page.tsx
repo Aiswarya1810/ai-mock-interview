@@ -25,7 +25,7 @@ export default function InterviewPage() {
 
     try {
       const model = genAI.getGenerativeModel({
-     model: "gemini-2.5-flash",
+     model: "gemini-2.0-flash",
    });
       const prompt = `
 Generate 5 interview questions based on this resume.
@@ -60,7 +60,7 @@ ${resumeText}
 
     try {
       const model = genAI.getGenerativeModel({
-      model: "gemini-2.5-flash",
+      model: "gemini-2.0-flash",
    });
 
       const prompt = `
